@@ -10,6 +10,7 @@ import neopixel
 # Setting the screen
 display.clear()
 display.show(Image.HAPPY)
+
 # Loop
 while True:
     # Setting my veriblas for the program

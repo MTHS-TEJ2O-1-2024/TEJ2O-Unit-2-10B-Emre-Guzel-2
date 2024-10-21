@@ -4,15 +4,19 @@
  * Created on: Oct 18 2024
  * This program reads the anmount of light 
 */
+
 // Seting the screen
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
+
 // Loop
 basic.forever(function () {
     // Setting my varibel and my code
     let lightLevel: number = null
+
     // Setting the neopixel
     lightLevel = input.lightLevel()
+
     // Added ligths becasue we want to control the NeoPixel LEDs
     let lights = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
     if (lightLevel <= 51) {
@@ -34,5 +38,4 @@ basic.forever(function () {
         lights.setPixelColor(3, neopixel.colors(NeoPixelColors.Purple))
     }
     lights.show()
-
 })
